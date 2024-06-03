@@ -37,7 +37,7 @@ ncurses library
 Building:
 
 Clone the repository:
-git clone https://github.com/your-username/network-packet-analyzer.git
+git clone https://github.com/John-Wasikye/network-packet-analyzer.git
 
 Navigate to the project directory:
 cd network-packet-analyzer
