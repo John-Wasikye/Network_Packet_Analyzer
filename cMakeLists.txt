@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.0)
+project(PacketSniffer)
+
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
+
+find_package(PCAP REQUIRED)
+
+# Specify the path to the NCURSES library and include directory
+set(NCURSES_LIBRARY "/usr/lib/x86_64-linux-gnu/libncurses.so")
+set(NCURSES_INCLUDE_DIR "/usr/include/ncurses")
+
+include_directories(${PCAP_INCLUDE_DIRS} ${NCURSES_INCLUDE_DIR})
+
+add_executable(PacketSniffer main.cpp)
+target_link_libraries(PacketSniffer ${PCAP_LIBRARIES} ${NCURSES_LIBRARY})
